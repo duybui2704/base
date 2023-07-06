@@ -1,0 +1,56 @@
+export enum StorageKeys {
+  KEY_ACCESS_TOKEN = 'KEY_ACCESS_TOKEN',
+  KEY_DEVICE_TOKEN = 'KEY_DEVICE_TOKEN',
+  KEY_DEVICE_TOKEN_FIREBASE = 'KEY_DEVICE_TOKEN_FIREBASE',
+  KEY_USER_INFO = 'KEY_USER_INFO',
+  KEY_SKIP_ONBOARDING = 'KEY_SKIP_ONBOARDING',
+  KEY_LAST_POSITION = 'KEY_LAST_POSITION',
+  KEY_LAST_LOGIN_INFO = 'KEY_LAST_LOGIN_INFO',
+  KEY_LATEST_NOTIFY_ID = 'KEY_LATEST_NOTIFY_ID',
+  KEY_SAVED_API_VERSION = 'KEY_SAVED_API_VERSION',
+  KEY_BIOMETRY_TYPE = 'KEY_BIOMETRY_TYPE',
+  KEY_FAST_AUTHENTICATION = 'KEY_FAST_AUTHENTICATION',
+  KEY_PASSCODE = 'KEY_PASSCODE',
+  KEY_RATE = 'KEY_RATING',
+  KEY_ENABLE_FAST_AUTHENTICATION = 'KEY_FAST_AUTHENTICATION',
+  KEY_PIN = 'KEY_PIN',
+  KEY_TEMP_DATA_FOR_PROPERTY_VALUATION = 'TEMP_DATA_FOR_PROPERTY_VALUATION',
+  KEY_SAVE_LOGIN_PHONE = 'KEY_SAVE_LOGIN_PHONE',
+  KEY_SAVE_LOGIN_PASS = 'KEY_SAVE_LOGIN_PASS ',
+}
+
+export const PHONE_PREFIX = '+84';
+export const PHONE_REGEX = /^0+[3,5,7,8,9]{1}[0-9]{1}[1-9]{1}[0-9]{6}$/;
+export const NUMBER_REGEX = /^[0-9]*$/;
+export const DELAY_CLICK = 3e2;
+
+export enum Events {
+  TOAST = 'TOAST',
+  LOGOUT = 'LOGOUT',
+  SWITCH_KEYBOARD = 'SWITCH_KEYBOARD',
+}
+
+export enum ToastTypes {
+  ERR = 0, //  red background
+  MSG = 1, // dark blue background
+  SUCCESS = 2, // green background
+}
+
+export enum API_CONFIG {
+  BASE_URL = 'https://jsonplaceholder.typicode.com',
+
+  TEST = '/users',
+}
+
+export enum TYPE_FORMAT_HEADER_BAR {
+  LIGHT_CONTENT = 'light-content',
+  DARK_CONTENT = 'dark-content',
+}
+
+export enum TYPE_RESIZE {
+  COVER = 'cover',
+  CONTAINER = 'container',
+  STRETCH = 'stretch',
+  CENTER = 'center',
+  REPEAT = 'repeat',
+}
