@@ -1,0 +1,22 @@
+{
+  "name": "my-component",
+  "version": "1.0.0",
+  "description": "Element base",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duybui2704/base.git"
+  },
+  "keywords": [
+    "270499Ac"
+  ],
+  "author": "duybx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duybui2704/base/issues"
+  },
+  "homepage": "https://github.com/duybui2704/base#readme"
+}

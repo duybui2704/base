@@ -12,17 +12,21 @@ import Popup, {PopupActions} from '@/components/Popup';
 import Navigator from '@/routers/Navigator';
 import ScreenName from '@/common/screenNames';
 import {observer} from 'mobx-react';
+import {requestLocationPermission} from '@/utils/Permissions';
+import {useIsFocused} from '@react-navigation/native';
 
 const Login = observer(() => {
   const refUser = useRef<TextFieldActions>(null);
   const refPass = useRef<TextFieldActions>(null);
   const {apiServices, common} = useAppStore();
   const refPopup = useRef<PopupActions>(null);
+  const isFocus = useIsFocused();
 
   useEffect(() => {
     refUser.current?.setValue('adminadmin');
     refPass.current?.setValue('admin123');
-  }, []);
+    requestLocationPermission();
+  }, [isFocus]);
 
   const onValidate = useCallback(() => {
     const _user = refUser?.current?.getValue();
