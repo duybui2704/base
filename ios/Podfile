@@ -44,6 +44,7 @@ target 'FoodCourt' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
   target 'FoodCourtTests' do
     inherit! :complete
