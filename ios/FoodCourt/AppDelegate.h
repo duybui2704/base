@@ -1,8 +1,14 @@
-#import <React/RCTBridgeDelegate.h>
-#import <UIKit/UIKit.h>
-#import <UserNotifications/UNUserNotificationCenter.h>
-@interface AppDelegate : UIResponder <UIApplicationDelegate, RCTBridgeDelegate, UNUserNotificationCenterDelegate>
+// #import <React/RCTBridgeDelegate.h>
+// #import <UIKit/UIKit.h>
+// #import <UserNotifications/UNUserNotificationCenter.h>
+// @interface AppDelegate : UIResponder <UIApplicationDelegate, RCTBridgeDelegate, UNUserNotificationCenterDelegate>
 
-@property (nonatomic, strong) UIWindow *window;
+// @property (nonatomic, strong) UIWindow *window;
+
+// @end
+#import <RCTAppDelegate.h>
+#import <UIKit/UIKit.h>
+
+@interface AppDelegate : RCTAppDelegate
 
 @end

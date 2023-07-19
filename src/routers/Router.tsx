@@ -14,7 +14,7 @@ import RootStack from './RouteStack';
 import {navigationRef} from './Navigator';
 import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 import {PopupsProvider} from '@/provider/popups-provider';
-
+import SplashScreen from 'react-native-splash-screen';
 const MyTheme = {
   ...DefaultTheme,
   colors: {
@@ -32,6 +32,10 @@ const App = () => {
       enableScreens(false);
     }
   }, []);
+
+  useEffect(() => {
+    SplashScreen.hide();
+  });
 
   //   CodePush.sync(
   //     codePushOptions,
