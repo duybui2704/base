@@ -10,7 +10,6 @@ import {EnhancedProps} from './hoc/HOCTest';
 const ComponentTest = (props: EnhancedProps) => {
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
   const renderItemFlatList = useCallback(({item}: {item: any}) => {
-    console.log('item', item);
     const onSelectItem = () => {
       setIsRefreshing(false);
     };
@@ -26,7 +25,7 @@ const ComponentTest = (props: EnhancedProps) => {
   }, []);
   const keyExtractor = useCallback((item: any, index: number) => `${index}${item.id}`, []);
   return (
-    <View style={{flex: 1, backgroundColor: 'red'}}>
+    <View style={{flex: 1}}>
       <MyFlatList
         data={props.additionalProp || []}
         renderItem={renderItemFlatList}

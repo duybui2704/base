@@ -6,10 +6,9 @@ import {Languages} from '@/locales/Languages';
 import {View, TouchableOpacity, Text} from 'react-native';
 import Navigator from '@/routers/Navigator';
 import ScreenName from '@/common/screenNames';
-import {EnhancedComponent, EnhancedComponent1} from '../hoc/HOCTest';
-import {MyTextInput, Button} from 'my-component';
-import {BUTTON_STYLES} from '@/components/elements/button/constants';
+import {EnhancedComponent} from '../hoc/HOCTest';
 import {TextFieldActions} from '@/components/elements/textfield/types';
+import NotificationListening from './NotificationListening';
 
 const Home = () => {
   const styles = MyStylesHome();
@@ -35,30 +34,25 @@ const Home = () => {
     console.log('text ==', valueText);
   };
   return (
-    <>
-      <HeaderBar title={Languages.home.homeName} isLight={false} noStatusBar hasBack />
-      <View style={styles.container}>
-        <TouchableOpacity
-          onPress={() => Navigator.navigateToDeepScreen([ScreenName.authStack, ScreenName.login])}>
-          <Text>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => common.setCount()}>
-          <Text>UP</Text>
-        </TouchableOpacity>
-        <View style={{height: 200, width: '100%'}}>
-          <EnhancedComponent name="John" additionalProp={data} onPress={onPress} />
+    <NotificationListening>
+      <>
+        <HeaderBar title={Languages.home.homeName} isLight={false} noStatusBar hasBack />
+        <View style={styles.container}>
+          <TouchableOpacity
+            onPress={() =>
+              Navigator.navigateToDeepScreen([ScreenName.authStack, ScreenName.login])
+            }>
+            <Text>Home</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => common.setCount()}>
+            <Text>UP</Text>
+          </TouchableOpacity>
+          <View style={{flex: 1}}>
+            <EnhancedComponent name="John" additionalProp={data} onPress={onPress} />
+          </View>
         </View>
-        <View style={{height: 200, width: '100%'}}>
-          <EnhancedComponent1 name="John" additionalProp={data} onPress={onPress} />
-        </View>
-        <MyTextInput ref={refInput} />
-        <Button
-          label={Languages.auth.login}
-          buttonStyle={BUTTON_STYLES.BLUE}
-          onPress={onGetValue}
-        />
-      </View>
-    </>
+      </>
+    </NotificationListening>
   );
 };
 

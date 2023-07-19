@@ -8,8 +8,10 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
-import java.util.List;
+
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
+
+import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -25,6 +27,8 @@ public class MainApplication extends Application implements ReactApplication {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
           new SplashScreenReactPackage();
+//          new RNFirebaseMessagingPackage();
+//          new RNFirebaseNotificationsPackage();
           return packages;
         }
 

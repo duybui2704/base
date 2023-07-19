@@ -2,7 +2,6 @@ import {PermissionsAndroid} from 'react-native';
 
 const requestLocationPermission = async () => {
   try {
-    console.log('requestLocationPermission');
     const granted = await PermissionsAndroid.request(
       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
       {

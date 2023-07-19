@@ -14,7 +14,6 @@ import ScreenName from '@/common/screenNames';
 import {observer} from 'mobx-react';
 import {requestLocationPermission} from '@/utils/Permissions';
 import {useIsFocused} from '@react-navigation/native';
-import SplashScreen from 'react-native-splash-screen';
 
 const Login = observer(() => {
   const refUser = useRef<TextFieldActions>(null);
@@ -22,11 +21,7 @@ const Login = observer(() => {
   const {apiServices, common} = useAppStore();
   const refPopup = useRef<PopupActions>(null);
   const isFocus = useIsFocused();
-  useEffect(() => {
-    // Ẩn splash screen khi ứng dụng đã sẵn sàng
-    console.log('111');
-    SplashScreen.hide();
-  }, []);
+
   useEffect(() => {
     refUser.current?.setValue('adminadmin');
     refPass.current?.setValue('admin123');
