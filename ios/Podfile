@@ -29,6 +29,7 @@ end
 
 target 'FoodCourt' do
   config = use_native_modules!
+  $RNFirebaseAnalyticsWithoutAdIdSupport=true
   # Flags change depending on the env values.
   flags = get_default_flags()
   use_react_native!(
@@ -48,9 +49,9 @@ target 'FoodCourt' do
   pod 'FirebaseCoreInternal', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
   pod 'FirebaseCore', :modular_headers => true
+  pod 'Firebase/Messaging', :modular_headers => true
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
-
   target 'FoodCourtTests' do
     inherit! :complete
     config = use_native_modules!
