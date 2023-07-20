@@ -1881,6 +1881,11 @@
   dependencies:
     invariant "^2.2.4"
 
+"@react-native-firebase/analytics@^18.3.0":
+  version "18.3.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/analytics/-/analytics-18.3.0.tgz#7f8ec6e10db86654f13acbe3a6f55776deb7416c"
+  integrity sha512-N1J8R1pkdv+cBhzOSaEp780ksDQIKVGF8VoVpon+iSDbZtjSWLByyLMrEP21ucCvIRdBQ6DgJs4FmSURl35/YA==
+
 "@react-native-firebase/app@^18.2.0":
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-18.2.0.tgz#a8f3f2aa8385d680557157930416a72b7f6146fa"
@@ -6922,7 +6927,7 @@ open@^6.2.0:
   dependencies:
     is-wsl "^1.1.0"
 
-opencollective-postinstall@^2.0.0, opencollective-postinstall@^2.0.1:
+opencollective-postinstall@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
   integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
@@ -7378,14 +7383,6 @@ react-native-fast-image@^8.6.3:
   version "8.6.3"
   resolved "https://registry.yarnpkg.com/react-native-fast-image/-/react-native-fast-image-8.6.3.tgz#6edc3f9190092a909d636d93eecbcc54a8822255"
   integrity sha512-Sdw4ESidXCXOmQ9EcYguNY2swyoWmx53kym2zRsvi+VeFCHEdkO+WG1DK+6W81juot40bbfLNhkc63QnWtesNg==
-
-react-native-firebase@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/react-native-firebase/-/react-native-firebase-5.6.0.tgz#6f6123f53cb73477915dd55c55f3e1de91db38d2"
-  integrity sha512-I+o3zNLdIz4pxWTCSZH70M1BcPl+SdqKQfurOT0sWcaMSL2ecDqVy0PCTmN7ORt7/Z879Er6PLgA/psjArQlmw==
-  dependencies:
-    opencollective-postinstall "^2.0.0"
-    prop-types "^15.7.2"
 
 react-native-gesture-handler@^2.12.0:
   version "2.12.0"

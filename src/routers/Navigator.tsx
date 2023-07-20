@@ -1,3 +1,4 @@
+import AnalyticsUtils from '@/utils/AnalyticsUtils';
 import {
   CommonActions,
   NavigationContainerRef,
@@ -22,6 +23,7 @@ const goBack = debounce(
 const pushScreen = debounce(
   (destination: string, data?: any) => {
     navigationRef.current?.dispatch(StackActions.push(destination, data));
+    AnalyticsUtils.trackScreen(destination);
   },
   DELAY_TIMER,
   {leading: true, trailing: false},
@@ -66,6 +68,7 @@ const navigateScreen = debounce(
   (destination: string, data?: any) => {
     if (navigationRef.current?.isReady()) {
       navigationRef.current?.navigate(destination, data);
+      AnalyticsUtils.trackScreen(destination);
     }
   },
   DELAY_TIMER,

@@ -23,6 +23,9 @@ PODS:
     - ReactCommon/turbomodule/core (= 0.72.1)
   - Firebase (10.12.0):
     - Firebase/Core (= 10.12.0)
+  - Firebase/AnalyticsWithoutAdIdSupport (10.12.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics/WithoutAdIdSupport (~> 10.12.0)
   - Firebase/Core (10.12.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (~> 10.12.0)
@@ -49,6 +52,15 @@ PODS:
     - FirebaseCore (~> 10.0)
     - FirebaseInstallations (~> 10.0)
     - GoogleAppMeasurement (= 10.12.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/WithoutAdIdSupport (10.12.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.12.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
     - GoogleUtilities/MethodSwizzler (~> 7.11)
     - GoogleUtilities/Network (~> 7.11)
@@ -612,6 +624,10 @@ PODS:
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
+  - RNFBAnalytics (18.3.0):
+    - Firebase/AnalyticsWithoutAdIdSupport (= 10.12.0)
+    - React-Core
+    - RNFBApp
   - RNFBApp (18.2.0):
     - Firebase/CoreOnly (= 10.12.0)
     - React-Core
@@ -746,6 +762,7 @@ DEPENDENCIES:
   - "RNCPushNotificationIOS (from `../node_modules/@react-native-community/push-notification-ios`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFastImage (from `../node_modules/react-native-fast-image`)
+  - "RNFBAnalytics (from `../node_modules/@react-native-firebase/analytics`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
   - "RNFBRemoteConfig (from `../node_modules/@react-native-firebase/remote-config`)"
@@ -888,6 +905,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-device-info"
   RNFastImage:
     :path: "../node_modules/react-native-fast-image"
+  RNFBAnalytics:
+    :path: "../node_modules/@react-native-firebase/analytics"
   RNFBApp:
     :path: "../node_modules/@react-native-firebase/app"
   RNFBMessaging:
@@ -983,6 +1002,7 @@ SPEC CHECKSUMS:
   RNCPushNotificationIOS: 64218f3c776c03d7408284a819b2abfda1834bc8
   RNDeviceInfo: 5795b418ed3451ebcaf39384e6cf51f60cb931c9
   RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
+  RNFBAnalytics: 02f33d41cd00ee9833ab99f1837b32033d59b688
   RNFBApp: 830185bbb8df42e07d6a7d6976730782040695a3
   RNFBMessaging: 47f1dbed2fb6dc9f4a79adc33bd32e52c901e4d4
   RNFBRemoteConfig: c933171b8b8314ac6022a90c456d671c7996e7c0
