@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <NotificationListening>
       <>
-        <HeaderBar title={Languages.home.homeName} isLight={false} noStatusBar hasBack />
+        <HeaderBar title={Languages.home.homeName} isLight={false} hasBack />
         <View style={styles.container}>
           <TouchableOpacity
             onPress={() =>

@@ -14,6 +14,7 @@ import ScreenName from '@/common/screenNames';
 import {observer} from 'mobx-react';
 import {requestLocationPermission} from '@/utils/Permissions';
 import {useIsFocused} from '@react-navigation/native';
+import ToastUtils from '@/utils/ToastUtils';
 
 const Login = observer(() => {
   const refUser = useRef<TextFieldActions>(null);
@@ -44,8 +45,7 @@ const Login = observer(() => {
   const onLogin = useCallback(async () => {
     if (onValidate()) {
       const resInfoAcc = await apiServices.common.getApiTest();
-      console.log('Login', resInfoAcc);
-
+      ToastUtils.showSuccessToast('Success');
       //   refPopup.current?.show();
       Navigator.navigateToDeepScreen([ScreenName.bottomTab, ScreenName.homeStack]);
     }
